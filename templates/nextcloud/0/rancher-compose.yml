@@ -1,6 +1,6 @@
 version: '2'
 catalog:
-  name: semptic-nextcloud
+  name: Nextcloud
   version: 1.0
   description: Nextcloud with apache and postgres
   questions: #Used to request user input for configuration options

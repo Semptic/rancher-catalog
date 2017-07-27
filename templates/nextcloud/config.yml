@@ -1,0 +1,6 @@
+name: nextcloud
+description: Nextcloud with apache and postgres
+version: 1.0
+category: File Synchronisation
+maintainer: Stefan Kuhn
+projectURL: https://github.com/Semptic/rancher-catalog.git
