@@ -1,5 +1,5 @@
-name: nextcloud
-description: Nextcloud with apache and postgres
+name: Nextcloud
+description: Enterprise File Sync and Share
 version: 1.0
 category: File Synchronisation
 maintainer: Stefan Kuhn
