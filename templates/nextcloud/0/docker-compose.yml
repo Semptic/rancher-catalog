@@ -4,7 +4,7 @@ services:
     nextcloud:
         image: nextcloud
         links:
-         - db
+         - nextcloud-db
         volumes:
          - nextcloud_apps:/var/www/html/custom_apps
          - nextcloud_config:/var/www/html/config
