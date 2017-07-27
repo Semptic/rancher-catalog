@@ -16,7 +16,7 @@ services:
          - POSTGRES_USER=${DB_USER}
          - POSTGRES_DB=${POSTGRES_DB}
         volumes:
-         - nextcloud-db_dat:/var/lib/postgresql/data
+         - nextcloud-db_data:/var/lib/postgresql/data
 
 volumes:
     nextcloud_apps:
