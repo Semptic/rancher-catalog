@@ -1,0 +1,28 @@
+version: '2'
+catalog:
+  name: semptic-nextcloud
+  version: 1.0
+  description: Nextcloud with apache and postgres
+  questions: #Used to request user input for configuration options
+   - variable: DB_USER
+       label: Postgres user
+       required: true
+       type: string
+       default: nextcloud
+   - variable: POSTGRES_DB
+     label: Postgres database
+       required: true
+       type: string
+       default: nextcloud
+   - variable: DB_PASS
+       label: Postgres password
+       required: true
+       type: password
+       
+services:
+    nextcloud:
+        scale: 1
+        start_on_create: true
+    nextcloud-db:
+        scale: 1
+        start_on_create: true
