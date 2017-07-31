@@ -1,8 +1,14 @@
 version: '2'
 
 services:
+    nginx:
+        image: nginx:alpine
+        links:
+         - nextcloud
+        volumes:
+         - nginx.conf:/etc/nginx/nginx.conf:ro
     nextcloud:
-        image: nextcloud
+        image: nextcloud:fpm
         links:
          - nextcloud-db
         volumes:
