@@ -23,7 +23,7 @@ catalog:
      label: Nginx configuration
      required: true
      type: multiline
-     default: |
+     default: |-
        user www-data
        
        http {
