@@ -25,6 +25,11 @@ catalog:
      type: multiline
      default: |-
        user www-data
+       worker_processes 1;
+       
+       events {
+           worker_connections 768;
+       }
        
        http {
            upstream php-handler {
