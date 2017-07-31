@@ -25,7 +25,7 @@ catalog:
      type: multiline
      default: |
        upstream php-handler {
-           server nextcloud:9000
+           server nextcloud:9000;
        }
        
        server {
