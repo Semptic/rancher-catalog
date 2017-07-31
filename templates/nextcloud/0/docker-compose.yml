@@ -6,7 +6,7 @@ services:
         links:
          - nextcloud
         environment:
-         - CONFIG: |
+         CONFIG: |
              upstream php-handler {
                  server nextcloud:9000;
              }
