@@ -23,7 +23,7 @@ catalog:
      label: Nginx configuration
      required: true
      type: multiline
-     default: |-
+     default: |
        upstream php-handler {
            server nextcloud:9000
        }
