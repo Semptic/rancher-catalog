@@ -6,28 +6,28 @@ catalog:
   description: Nextcloud - Enterprise File Sync and Share
   questions:
    - variable: DB_USER
-     default: nextcloud
      label: Postgres user
-     required: true
      type: string
-   - variable: POSTGRES_DB
+     required: true
      default: nextcloud
-     label: Postgres database
-     required: true
+   - variable: DB_NAME
+     label: Name of database
      type: string
-   - variable: DB_PASS
-     label: Postgres password
      required: true
+     default: nextcloud
+   - variable: DB_PASS
+     label: password for password
      type: password
+     required: true
+   - variable: ADMIN_USER
+     label: Nextcloud admin username
+     type: string
+     required: true
+     default: admin
    - variable: ADMIN_PASS
      label: Nextcloud admin password
-     required: true
      type: password
-   - variable: ADMIN
-     default: admin
-     label: Nextcloud admin username
      required: true
-     type: string
 
 services:
   nextcloud:
