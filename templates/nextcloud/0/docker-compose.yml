@@ -24,8 +24,10 @@ services:
          - POSTGRES_USER=${DB_USER}
          - POSTGRES_DB=${DB_NAME}
         volumes:
-         - nextcloud_data:/var/lib/postgresql/data/
+         - nextcloud-db_data:/var/lib/postgresql/data/
 
 volumes:
     nextcloud_data:
+        driver: convoy
+    nextcloud-db_data:
         driver: convoy
