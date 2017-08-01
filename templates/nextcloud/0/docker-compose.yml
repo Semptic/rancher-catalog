@@ -13,6 +13,7 @@ services:
          - DB_PASSWORD=${DB_PASS}
          - DB_USER=${DB_USER}
          - DB_HOST=nextcloud-db
+         - DOMAIN=${DOMAIN}
         volumes:
          - nextcloud_data:/apps2
          - nextcloud_data:/config

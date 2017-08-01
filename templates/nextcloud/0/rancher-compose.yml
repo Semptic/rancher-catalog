@@ -5,6 +5,10 @@ catalog:
   version: 1.0
   description: Nextcloud - Enterprise File Sync and Share
   questions:
+   - variable: DOMAIN
+     label: Domain nextcloud is running under
+     type: string
+     required: true
    - variable: DB_USER
      label: Postgres user
      type: string
