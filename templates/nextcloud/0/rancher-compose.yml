@@ -16,7 +16,7 @@ catalog:
      required: true
      default: nextcloud
    - variable: DB_PASS
-     label: password for password
+     label: Password for database
      type: password
      required: true
    - variable: ADMIN_USER
