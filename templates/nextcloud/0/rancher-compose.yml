@@ -19,6 +19,15 @@ catalog:
      label: Postgres password
      required: true
      type: password
+   - variable: ADMIN_PASS
+     label: Nextcloud admin password
+     required: true
+     type: password
+   - variable: ADMIN
+     default: admin
+     label: Nextcloud admin username
+     required: true
+     type: string
 
 services:
   nextcloud:

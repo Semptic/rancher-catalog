@@ -114,10 +114,23 @@ services:
         image: nextcloud:fpm
         links:
          - nextcloud-db
+        environment:
+          AUTOCONFIG: |
+              <?php
+                $$AUTOCONFIG = array(
+                  "dbtype"        => "pgsql",
+                  "dbname"        => "${POSTGRES_DB}",
+                  "dbuser"        => "${DB_USER}",
+                  "dbpass"        => "${DB_PASS}",
+                  "dbhost"        => "nextcloud-db",
+                  "adminlogin"    => "${ADMIN}",
+                  "adminpass"     => "${ADMIN_PASS}",
+                );
         volumes:
          - nextcloud_apps:/var/www/html/custom_apps
          - nextcloud_config:/var/www/html/config
          - nextcloud_data:/var/www/html/data
+        command: "[ ! -f /var/www/html/config/config.php] && echo \"$AUTOCONFIG\" > /var/www/html/config/autoconfig.php; php-fmp"
     nextcloud-db:
         image: postgres:alpine
         environment:
