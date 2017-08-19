@@ -29,6 +29,4 @@ services:
 
 volumes:
     nextcloud_data:
-        driver: convoy
     nextcloud-db_data:
-        driver: convoy
