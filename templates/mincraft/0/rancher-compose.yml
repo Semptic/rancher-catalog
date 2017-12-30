@@ -14,6 +14,10 @@ catalog:
      label: URL to the mod
      type: string
      required: true
+   - variable: MOTD
+     label: Server description
+     type: string
+     required: true
    - variable: ENABLE_RCON
      label: Enable Rcon
      default: false
@@ -39,7 +43,7 @@ catalog:
      label: Comma seperated list of ops
      type: string  
    - variable: ONLINE_MODE
-     label: Disable online mode
+     label: Enable online mode
      required: true
      default: true
      type: boolean   

@@ -6,6 +6,7 @@ services:
         environment:
          - TYPE=FTB
          - EULA=${EULA}
+         - MOTD=${MOTD}
          - ENABLE_RCON=${ENABLE_RCON}
          - RCON_PASSWORD=${RCON_PASSWORD}
          - MAX_RAM=${MAX_RAM}
