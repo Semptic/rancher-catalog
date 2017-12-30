@@ -7,6 +7,7 @@ services:
          - TYPE=FTB
          - EULA=${EULA}
          - MOTD=${MOTD}
+         - MAX_TICK_TIME=${MAX_TICK_TIME}
          - ENABLE_RCON=${ENABLE_RCON}
          - RCON_PASSWORD=${RCON_PASSWORD}
          - MAX_RAM=${MAX_RAM}

@@ -10,21 +10,44 @@ catalog:
      required: true
      default: false
      type: boolean   
+
    - variable: MOD
      label: URL to the mod
      type: string
      required: true
+
    - variable: MOTD
      label: Server description
      type: string
      required: true
-   - variable: ENABLE_RCON
-     label: Enable Rcon
-     default: false
-     type: boolean   
-   - variable: RCON_PASSWORD
-     label: Rcon password
-     type: password   
+
+   - variable: DIFFICULTY
+     label: The difficulty level 
+     default: easy
+     type: enum
+     options:
+       - peaceful
+       - easy
+       - normal
+       - hard
+
+   - variable: MODE
+     label: The game mode
+     default: survival
+     type: enum
+     options:
+       - creative
+       - survival
+       - adventure
+       - spectator
+
+   - variable: WHITELIST
+     label: Comma seperated list of whitelisted players
+     type: string  
+   - variable: OPS
+     label: Comma seperated list of ops
+     type: string  
+
    - variable: MAX_RAM
      label: Max ram for minecraft
      type: string
@@ -36,38 +59,38 @@ catalog:
    - variable: JAVA_PARAMETERS
      label: Optional java parameters
      type: string
-   - variable: WHITELIST
-     label: Comma seperated list of whitelisted players
-     type: string  
-   - variable: OPS
-     label: Comma seperated list of ops
-     type: string  
+
+   - variable: ENABLE_RCON
+     label: Enable Rcon
+     default: false
+     type: boolean   
+   - variable: RCON_PASSWORD
+     label: Rcon password
+     type: password   
+
    - variable: ONLINE_MODE
      label: Enable online mode
-     required: true
      default: true
      type: boolean   
+
    - variable: MAX_PLAYERS
      label: Maximum number of players
      type: int  
      default: 20
+
+   - variable: MAX_TICK_TIME
+     label:  The maximum number of milliseconds a single tick may take before the server watchdog stops the server .
+     type: int
+     default: 60000
    - variable: MAX_WORLD_SIZE
      label:  This sets the maximum possible size in blocks, expressed as a radius, that the world border can obtain.
      type: int
-     default: 10000
+     default: 29999984
+
    - variable: ALLOW_NETHER
      label: Allows players to travel to the Nether.
      default: true
      type: boolean
-   - variable: DIFFICULTY
-     label: The difficulty level 
-     default: easy
-     type: enum
-     options:
-       - peaceful
-       - easy
-       - normal
-       - hard
    - variable: ANNOUNCE_PLAYER_ACHIEVEMENTS
      label: Allows server to announce when a player gets an achievement.
      default: true
@@ -100,6 +123,7 @@ catalog:
      label: If set to true, players will be set to spectator mode if they die.
      default: false
      type: boolean
+
    - variable: MAX_BUILD_HEIGHT
      label: The maximum height in which building is allowed. Terrain may still naturally generate above a low height limit.
      default: 256
@@ -111,26 +135,17 @@ catalog:
    - variable: SEED
      label: If you want to create the Minecraft level with a specific seed
      type: string
-   - variable: MODE
-     label: The game mode
-     default: survival
-     type: enum
-     options:
-       - creative
-       - survival
-       - adventure
-       - spectator
    - variable: PVP
      label: If pvp is enabled.
      default: false
      type: boolean
+
    - variable: LEVEL_TYPE
-     label: By default, a standard world is generated with hills, valleys, water, etc. A different level type can be configured by setting LEVEL_TYPE and GENERATOR_SETTINGS
+     label: By default, a standard world is generated with hills, valleys, water, etc. A different level type can be configured by setting LEVEL_TYPE
      type: string
    - variable: GENERATOR_SETTINGS
-     label: By default, a standard world is generated with hills, valleys, water, etc. A different level type can be configured by setting LEVEL_TYPE and GENERATOR_SETTINGS
+     label: By default, a standard world is generated with hills, valleys, water, etc. This can modified by applying GENERATOR_SETTINGS
      type: string
-
 
 services:
   minecraft:
