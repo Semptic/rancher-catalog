@@ -38,6 +38,11 @@ catalog:
    - variable: OPS
      label: Comma seperated list of ops
      type: string  
+   - variable: ONLINE_MODE
+     label: Disable online mode
+     required: true
+     default: true
+     type: boolean   
    - variable: MAX_PLAYERS
      label: Maximum number of players
      type: int  

@@ -6,10 +6,13 @@ services:
         environment:
          - TYPE=FTB
          - EULA=${EULA}
+         - ENABLE_RCON=${ENABLE_RCON}
+         - RCON_PASSWORD=${RCON_PASSWORD}
          - MAX_RAM=${MAX_RAM}
          - MIN_RAM=${MIN_RAM}
          - DIFFICULTY=${DIFFICULTY}
          - WHITELIST=${WHITELIST}
+         - ONLINE_MODE=${ONLINE_MODE}
          - OPS=${OPS}
          - MAX_PLAYERS=${MAX_PLAYERS}
          - MAX_WORLD_SIZE=${MAX_WORLD_SIZE}
