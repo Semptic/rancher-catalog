@@ -50,104 +50,104 @@ catalog:
      options:
        - true
        - false
-    - variable: DIFFICULTY
-      label: The difficulty level 
-      default: easy
-      type: enum
-      options:
-        - peaceful
-        - easy
-        - normal
-        - hard
-    - variable: ANNOUNCE_PLAYER_ACHIEVEMENTS
-      label: Allows server to announce when a player gets an achievement.
-      default: false
-      type: enum
-      options:
-        - true
-        - false
-    - variable: ENABLE_COMMAND_BLOCK
-      label: Enables command blocks
-      default: false
-      type: enum
-      options:
-        - true
-        - false
-    - variable: FORCE_GAMEMODE
-      label: Force players to join in the default game mode.
-      default: true
-      type: enum
-      options:
-        - true
-        - false
-    - variable: GENERATE_STRUCTURES
-      label: Defines whether structures (such as villages) will be generated.
-      default: true
-      type: enum
-      options:
-        - true
-        - false
-    - variable: SPAWN_ANIMALS
-      label: Determines if animals will be able to spawn.
-      default: true
-      type: enum
-      options:
-        - true
-        - false
-    - variable: SPAWN_MONSTERS
-      label: Determines if monsters will be spawned.
-      default: true
-      type: enum
-      options:
-        - true
-        - false
-    - variable: SPAWN_NPCS
-      label: Determines if villagers will be spawned.
-      default: true
-      type: enum
-      options:
-        - true
-        - false
-    - variable: HARDCORE
-      label: If set to true, players will be set to spectator mode if they die.
-      default: false
-      type: enum
-      options:
-        - true
-        - false
-    - variable: MAX_BUILD_HEIGHT
-      label: The maximum height in which building is allowed. Terrain may still naturally generate above a low height limit.
-      default: 256
-      type: string
-    - variable: VIEW_DISTANCE
-      label: Sets the amount of world data the server sends the client, measured in chunks in each direction of the player (radius, not diameter). It determines the server-side viewing distance.
-      default: 15
-      type: string
-    - variable: SEED
-      label: If you want to create the Minecraft level with a specific seed
-      type: string
-    - variable: MODE
-      label: The game mode
-      default: survival
-      type: enum
-      options:
-        - creative
-        - survival
-        - adventure
-        - spectator
-    - variable: PVP
-      label: If pvp is enabled.
-      default: false
-      type: enum
-      options:
-        - true
-        - false
-    - variable: LEVEL_TYPE
-      label: By default, a standard world is generated with hills, valleys, water, etc. A different level type can be configured by setting LEVEL_TYPE and GENERATOR_SETTINGS
-      type: string
-    - variable: GENERATOR_SETTINGS
-      label: By default, a standard world is generated with hills, valleys, water, etc. A different level type can be configured by setting LEVEL_TYPE and GENERATOR_SETTINGS
-      type: string
+   - variable: DIFFICULTY
+     label: The difficulty level 
+     default: easy
+     type: enum
+     options:
+       - peaceful
+       - easy
+       - normal
+       - hard
+   - variable: ANNOUNCE_PLAYER_ACHIEVEMENTS
+     label: Allows server to announce when a player gets an achievement.
+     default: false
+     type: enum
+     options:
+       - true
+       - false
+   - variable: ENABLE_COMMAND_BLOCK
+     label: Enables command blocks
+     default: false
+     type: enum
+     options:
+       - true
+       - false
+   - variable: FORCE_GAMEMODE
+     label: Force players to join in the default game mode.
+     default: true
+     type: enum
+     options:
+       - true
+       - false
+   - variable: GENERATE_STRUCTURES
+     label: Defines whether structures (such as villages) will be generated.
+     default: true
+     type: enum
+     options:
+       - true
+       - false
+   - variable: SPAWN_ANIMALS
+     label: Determines if animals will be able to spawn.
+     default: true
+     type: enum
+     options:
+       - true
+       - false
+   - variable: SPAWN_MONSTERS
+     label: Determines if monsters will be spawned.
+     default: true
+     type: enum
+     options:
+       - true
+       - false
+   - variable: SPAWN_NPCS
+     label: Determines if villagers will be spawned.
+     default: true
+     type: enum
+     options:
+       - true
+       - false
+   - variable: HARDCORE
+     label: If set to true, players will be set to spectator mode if they die.
+     default: false
+     type: enum
+     options:
+       - true
+       - false
+   - variable: MAX_BUILD_HEIGHT
+     label: The maximum height in which building is allowed. Terrain may still naturally generate above a low height limit.
+     default: 256
+     type: string
+   - variable: VIEW_DISTANCE
+     label: Sets the amount of world data the server sends the client, measured in chunks in each direction of the player (radius, not diameter). It determines the server-side viewing distance.
+     default: 15
+     type: string
+   - variable: SEED
+     label: If you want to create the Minecraft level with a specific seed
+     type: string
+   - variable: MODE
+     label: The game mode
+     default: survival
+     type: enum
+     options:
+       - creative
+       - survival
+       - adventure
+       - spectator
+   - variable: PVP
+     label: If pvp is enabled.
+     default: false
+     type: enum
+     options:
+       - true
+       - false
+   - variable: LEVEL_TYPE
+     label: By default, a standard world is generated with hills, valleys, water, etc. A different level type can be configured by setting LEVEL_TYPE and GENERATOR_SETTINGS
+     type: string
+   - variable: GENERATOR_SETTINGS
+     label: By default, a standard world is generated with hills, valleys, water, etc. A different level type can be configured by setting LEVEL_TYPE and GENERATOR_SETTINGS
+     type: string
 
 
 services:
