@@ -1,7 +1,7 @@
 version: '2'
 
 catalog:
-  name: nextcloud
+  name: minecraft
   version: 1.0
   description: Minecraft
   questions:
@@ -21,10 +21,11 @@ catalog:
    - variable: EULA
      label: Accept the eula
      required: true
+     default: FALSE
      type: enum   
      options: # List of options if using type of `enum`
-       - FALSE
        - TRUE
+       - FALSE
    - variable: WHITELIST
      label: Comma seperated list of whitelisted players
      type: string  
@@ -61,7 +62,7 @@ catalog:
        - hard
    - variable: ANNOUNCE_PLAYER_ACHIEVEMENTS
      label: Allows server to announce when a player gets an achievement.
-     default: false
+     default: true
      type: enum
      options:
        - true
@@ -151,7 +152,7 @@ catalog:
 
 
 services:
-  nextcloud:
+  minecraft:
     scale: 1
     start_on_create: true
 
