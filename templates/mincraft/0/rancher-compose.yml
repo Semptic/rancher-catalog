@@ -5,27 +5,33 @@ catalog:
   version: 1.0
   description: Minecraft
   questions:
+   - variable: EULA
+     label: Accept the eula
+     required: true
+     default: false
+     type: boolean   
+   - variable: MOD
+     label: URL to the mod
+     type: string
+     required: true
+   - variable: ENABLE_RCON
+     label: Enable Rcon
+     default: false
+     type: boolean   
+   - variable: RCON_PASSWORD
+     label: Rcon password
+     type: password   
    - variable: MAX_RAM
      label: Max ram for minecraft
      type: string
-     required: true
      default: 2G
    - variable: MIN_RAM
      label: Min ram for minecraft
      type: string
-     required: true
      default: 2G
    - variable: JAVA_PARAMETERS
      label: Optional java parameters
      type: string
-   - variable: EULA
-     label: Accept the eula
-     required: true
-     default: FALSE
-     type: enum   
-     options: # List of options if using type of `enum`
-       - TRUE
-       - FALSE
    - variable: WHITELIST
      label: Comma seperated list of whitelisted players
      type: string  
@@ -34,23 +40,16 @@ catalog:
      type: string  
    - variable: MAX_PLAYERS
      label: Maximum number of players
-     type: string  
+     type: int  
      default: 20
-   - variable: MOD
-     label: URL to the mod
-     type: string
-     required: true
    - variable: MAX_WORLD_SIZE
      label:  This sets the maximum possible size in blocks, expressed as a radius, that the world border can obtain.
-     type: string
+     type: int
      default: 10000
    - variable: ALLOW_NETHER
      label: Allows players to travel to the Nether.
      default: true
-     type: enum
-     options:
-       - true
-       - false
+     type: boolean
    - variable: DIFFICULTY
      label: The difficulty level 
      default: easy
@@ -63,67 +62,43 @@ catalog:
    - variable: ANNOUNCE_PLAYER_ACHIEVEMENTS
      label: Allows server to announce when a player gets an achievement.
      default: true
-     type: enum
-     options:
-       - true
-       - false
+     type: boolean
    - variable: ENABLE_COMMAND_BLOCK
      label: Enables command blocks
      default: false
-     type: enum
-     options:
-       - true
-       - false
+     type: boolean
    - variable: FORCE_GAMEMODE
      label: Force players to join in the default game mode.
      default: true
-     type: enum
-     options:
-       - true
-       - false
+     type: boolean
    - variable: GENERATE_STRUCTURES
      label: Defines whether structures (such as villages) will be generated.
      default: true
-     type: enum
-     options:
-       - true
-       - false
+     type: boolean
    - variable: SPAWN_ANIMALS
      label: Determines if animals will be able to spawn.
      default: true
-     type: enum
-     options:
-       - true
-       - false
+     type: boolean
    - variable: SPAWN_MONSTERS
      label: Determines if monsters will be spawned.
      default: true
-     type: enum
-     options:
-       - true
-       - false
+     type: boolean
    - variable: SPAWN_NPCS
      label: Determines if villagers will be spawned.
      default: true
-     type: enum
-     options:
-       - true
-       - false
+     type: boolean
    - variable: HARDCORE
      label: If set to true, players will be set to spectator mode if they die.
      default: false
-     type: enum
-     options:
-       - true
-       - false
+     type: boolean
    - variable: MAX_BUILD_HEIGHT
      label: The maximum height in which building is allowed. Terrain may still naturally generate above a low height limit.
      default: 256
-     type: string
+     type: int
    - variable: VIEW_DISTANCE
      label: Sets the amount of world data the server sends the client, measured in chunks in each direction of the player (radius, not diameter). It determines the server-side viewing distance.
      default: 15
-     type: string
+     type: int
    - variable: SEED
      label: If you want to create the Minecraft level with a specific seed
      type: string
@@ -139,10 +114,7 @@ catalog:
    - variable: PVP
      label: If pvp is enabled.
      default: false
-     type: enum
-     options:
-       - true
-       - false
+     type: boolean
    - variable: LEVEL_TYPE
      label: By default, a standard world is generated with hills, valleys, water, etc. A different level type can be configured by setting LEVEL_TYPE and GENERATOR_SETTINGS
      type: string
