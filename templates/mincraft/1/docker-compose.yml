@@ -5,5 +5,11 @@ services:
         image: semptic/minecraft-sponge
         environment:
          - EULA=${EULA}
+         - MC_VERSION=${MC_VERSION}
+         - FORGE_VERSION=${FORGE_VERSION}
+         - FORGE_BUILD=${FORGE_BUILD}
+         - SPONGE_API_VERSION=${SPONGE_API_VERSION}
+         - SPONGE_BUILD=${SPONGE_BUILD}
+         - JAVA_OPTS=${JAVA_OPTS}
         volumes:
          - ${STORAGE}:/minecraft
