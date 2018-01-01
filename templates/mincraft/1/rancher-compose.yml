@@ -1,0 +1,46 @@
+version: '2'
+
+catalog:
+  name: minecraft
+  version: 2.0
+  description: Minecraft
+  questions:
+   - variable: EULA
+     label: Accept the eula
+     required: true
+     default: false
+     type: boolean   
+   - variable: STORAGE
+     label: Local storage path for the minecraft data
+     type: string
+     required: true
+   - variable: MC_VERSION
+     label: Minecraft version
+     type: string
+     required: true
+   - variable: FORGE_VERSION
+     label: Forge version
+     type: string
+     required: true
+   - variable: FORGE_BUILD
+     label: Forge build id
+     type: string
+     required: true
+   - variable: SPONGE_API_VERSION
+     label: Sponge api version
+     type: string
+     required: true
+   - variable: SPONGE_BUILD
+     label: Sponge build id
+     type: string
+     required: true
+   - variable: JAVA_OPTS
+     label: Java options
+     type: string
+     default: -Xms1G -Xmx8G -XX:+UseG1GC -server
+
+services:
+  minecraft:
+    scale: 1
+    start_on_create: true
+

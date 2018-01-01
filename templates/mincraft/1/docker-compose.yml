@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+    minecraft:
+        image: semptic/minecraft-sponge
+        environment:
+         - EULA=${EULA}
+        volumes:
+         - ${STORAGE}:/minecraft
