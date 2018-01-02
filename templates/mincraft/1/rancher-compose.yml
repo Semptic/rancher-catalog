@@ -15,6 +15,14 @@ catalog:
      required: true
      default: false
      type: boolean   
+   - variable: RCON_PW
+     label: Rcon password
+     type: password
+     required: true
+   - variable: MOTD
+     label: motd message
+     type: string
+     required: true
    - variable: STORAGE
      label: Local storage path for the minecraft data
      type: string
@@ -31,6 +39,7 @@ catalog:
      label: Forge version
      type: string
      required: true
+     default: latest
    - variable: JAVA_OPTS
      label: Java options
      type: string

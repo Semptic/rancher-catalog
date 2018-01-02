@@ -6,6 +6,8 @@ services:
         user: ${MC_USER}
         environment:
          - EULA=${EULA}
+         - RCON_PW=${RCON_PW}
+         - MOTD=${MOTD}
          - MC_VERSION=${MC_VERSION}
          - SPONGE_VERSION=${SPONGE_VERSION}
          - FORGE_VERSION=${FORGE_VERSION}
