@@ -6,19 +6,19 @@ catalog:
   description: Minecraft
   questions:
    - variable: MC_USER
-      label: Uid of the user to run under
-      type: string
-      required: true
-      default: 1000
+     label: Uid of the user to run under
+     type: string
+     required: true
+     default: 1000
+   - variable: OPS
+     label: Ops user
+     type: string
+     required: true
    - variable: EULA
      label: Accept the eula
      required: true
      default: false
      type: boolean   
-   - variable: RCON_PW
-     label: Rcon password
-     type: password
-     required: true
    - variable: MOTD
      label: motd message
      type: string
