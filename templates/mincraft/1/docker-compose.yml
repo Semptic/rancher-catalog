@@ -8,7 +8,6 @@ services:
          - EULA=${EULA}
          - MOTD=${MOTD}
          - MC_VERSION=${MC_VERSION}
-         - SPONGE_VERSION=${SPONGE_VERSION}
          - FORGE_VERSION=${FORGE_VERSION}
          - OPS=${OPS}
          - JAVA_OPTS=${JAVA_OPTS}

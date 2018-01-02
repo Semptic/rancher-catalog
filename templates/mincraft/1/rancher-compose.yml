@@ -31,10 +31,6 @@ catalog:
      label: Minecraft version
      type: string
      required: true
-   - variable: SPONGE_VERSION
-     label: Version of sponge
-     type: string
-     required: true
    - variable: FORGE_VERSION
      label: Forge version
      type: string
