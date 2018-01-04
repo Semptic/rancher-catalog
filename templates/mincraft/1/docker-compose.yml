@@ -4,6 +4,7 @@ services:
     minecraft:
         image: semptic/minecraft-sponge
         user: ${MC_USER}
+        tty: true
         environment:
          - EULA=${EULA}
          - MOTD=${MOTD}
