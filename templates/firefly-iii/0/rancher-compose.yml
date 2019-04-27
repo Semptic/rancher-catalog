@@ -1,0 +1,36 @@
+version: '2'
+
+catalog:
+  name: nextcloud
+  version: 1.0
+  description: Nextcloud - Enterprise File Sync and Share
+  questions:
+   - variable: APP_URL
+     label: URL to access firefly
+     type: string
+     required: true
+   - variable: LOG_LEVEL
+     label: Log level of firefly
+     type: string
+   - variable: DB_USER
+     label: Postgres user
+     type: string
+     required: true
+     default: firefly
+   - variable: DB_PASS
+     label: Password for database
+     type: password
+     required: true
+   - variable: APP_KEY
+     label: Password for database (must be exactly 32 characters long).
+     type: password
+     required: true
+services:
+  firefly:
+    scale: 1
+    start_on_create: true
+
+  db:
+    scale: 1
+    start_on_create: true
+

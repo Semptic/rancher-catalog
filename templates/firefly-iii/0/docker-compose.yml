@@ -1,0 +1,35 @@
+version: '2'
+
+services:
+    firefly:
+        image: jc5x/firefly-iii
+        links:
+         - db
+        environment: 
+          - FF_DB_HOST=db
+          - FF_DB_NAME=firefly
+          - FF_DB_USER=${DB_USER}
+          - FF_DB_PASSWORD=${DB_PASS}
+          - FF_APP_KEY=${APP_KEY}
+          - FF_APP_ENV=local
+          - FF_DB_CONNECTION=pgsql
+          - TZ=Europe/Amsterdam
+          - APP_URL=${APP_URL}
+          - APP_LOG_LEVEL=${LOG_LEVEL}
+        volumes:
+         - export:/var/www/firefly-iii/storage/export
+         - upload:/var/www/firefly-iii/storage/upload
+    db:
+        image: postgres:alpine
+        environment:
+         - POSTGRES_PASSWORD=${DB_PASS}
+         - POSTGRES_USER=${DB_USER}
+         - POSTGRES_DB=firefly
+        volumes:
+         - db_data:/var/lib/postgresql/data/
+
+volumes:
+  db_data: ~
+  export: ~
+  upload: ~
+
