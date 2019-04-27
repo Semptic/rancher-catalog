@@ -1,9 +1,9 @@
 version: '2'
 
 catalog:
-  name: nextcloud
+  name: firefly
   version: 1.0
-  description: Nextcloud - Enterprise File Sync and Share
+  description: Firefly III - A self-hosted manager for your personal finances.
   questions:
    - variable: APP_URL
      label: URL to access firefly
