@@ -12,6 +12,7 @@ catalog:
    - variable: LOG_LEVEL
      label: Log level of firefly
      type: string
+     default: info
    - variable: DB_USER
      label: Postgres user
      type: string
